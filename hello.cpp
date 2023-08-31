@@ -2,6 +2,7 @@
 #include <cstring>
 
 using namespace std;
+void inthongtin( struct Books *book );
 
 struct Books
 {
@@ -28,19 +29,20 @@ int main( )
    strcpy( QuyenSach2.chude, "Van hoc");
    QuyenSach2.book_id = 3214;
 
-   // in thong tin ve QuyenSach1
-   cout << "Tieu de cua Quyen sach thu nhat la: " << QuyenSach1.tieude <<endl;
-   cout << "Tac gia cua Quyen sach thu nhat la: " << QuyenSach1.tacgia <<endl;
-   cout << "Chu de cua Quyen sach thu nhat la: " << QuyenSach1.chude <<endl;
-   cout << "ID cua Quyen sach thu nhat la: " << QuyenSach1.book_id <<endl;
-
-   cout << "\n\n===================================================================\n\n" <<endl;
+    // in thong tin ve QuyenSach1
+   inthongtin( &QuyenSach1 );
 
    // in thong tin ve QuyenSach2
-   cout << "Tieu de cua Quyen sach thu hai la: " << QuyenSach2.tieude <<endl;
-   cout << "Tac gia cua Quyen sach thu hai la: " << QuyenSach2.tacgia <<endl;
-   cout << "Chu de cua Quyen sach thu hai la: " << QuyenSach2.chude <<endl;
-   cout << "ID cua Quyen sach thu hai la: " << QuyenSach2.book_id <<endl;
+   inthongtin( &QuyenSach2 );
 
    return 0;
+}
+
+void inthongtin( struct Books *book )
+{
+   cout << "Tieu de sach: " << (*book).tieude <<endl;
+   cout << "Tac gia: " << book->tacgia <<endl;
+   cout << "Chu de: " << book->chude <<endl;
+   cout << "ID cua sach: " << book->book_id <<endl;
+   cout << "\n\n========================================\n\n" <<endl;
 }
