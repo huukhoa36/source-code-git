@@ -3,7 +3,7 @@
 int main()
 {
    /* Day la chuong trinh C dau tien */
-   printf("Hello, World! \n");
+   printf("Hello, World!~~~~~~~~~ \n");
 
    return 0;
 }
